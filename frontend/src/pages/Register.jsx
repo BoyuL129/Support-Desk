@@ -34,7 +34,7 @@ function Register() {
     }
 
     dispatch(reset());
-  }, [isError, isSuccess, user, message, navigate, dispatch]);
+  }, [isError, isLoading, isSuccess, user, message, navigate, dispatch]);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -63,7 +63,7 @@ function Register() {
     <>
       <section className="heading">
         <h1>
-          <FaUser /> Register {user}
+          <FaUser /> Register
         </h1>
         <p>Please create an account</p>
       </section>
@@ -87,8 +87,8 @@ function Register() {
               type="email"
               className="form-control"
               id="email"
-              email="email"
-              name={email}
+              name="email"
+              value={email}
               onChange={onChange}
               placeholder="Enter your email"
               required

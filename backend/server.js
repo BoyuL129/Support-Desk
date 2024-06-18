@@ -5,6 +5,7 @@ const dotenv = require("dotenv").config();
 
 // routes
 const userRoutes = require("./routes/userRoutes");
+const ticketRoutes = require("./routes/ticketRoutes");
 const errorHandler = require("./middleware/errorMiddleware");
 const connectDB = require("./config/db");
 
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 
 // routes
 app.use("/api/users", userRoutes);
+app.use("/api/tickets", ticketRoutes);
 app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`server started on ${PORT}`));

@@ -4,7 +4,7 @@ import ticketService from "./ticketService";
 import { extractErrorMessage } from "../../utils";
 
 // NOTE: no need for isLoading, isSuccess, isError or message as we can leverage
-// our AsyncThunkAction and get Promise reolved or rejected messages at
+// our AsyncThunkAction and get Promise resolved or rejected messages at
 // component level
 const initialState = {
   tickets: null,

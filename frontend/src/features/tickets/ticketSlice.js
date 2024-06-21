@@ -3,9 +3,6 @@ import ticketService from "./ticketService";
 // NOTE: use a extractErrorMessage function to save some repetition
 import { extractErrorMessage } from "../../utils";
 
-// NOTE: no need for isLoading, isSuccess, isError or message as we can leverage
-// our AsyncThunkAction and get Promise resolved or rejected messages at
-// component level
 const initialState = {
   tickets: null,
   ticket: null,
@@ -62,10 +59,6 @@ export const closeTicket = createAsyncThunk(
     }
   }
 );
-
-// NOTE: removed loading, isSuccess state as it can be infered from presence or
-// absence of tickets for simpler state management with no need for a reset
-// function
 
 export const ticketSlice = createSlice({
   name: "ticket",

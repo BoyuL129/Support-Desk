@@ -22,7 +22,7 @@ function NewTicket() {
       .unwrap()
       .then(() => {
         // good response then navigate to user
-        navigate("./tickets");
+        navigate("/tickets");
         toast.success("New ticket created!");
       })
       .catch(toast.error);
